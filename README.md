@@ -35,8 +35,23 @@ on, written directly up to `space_10`. For the example above, it should choose
 `space_5`. JavaScript reads the number, creates five spaces, and puts the value
 after them.
 
-This means the package can add between 0 and 10 spaces. If more than 10 spaces
-are needed, Jev has no correct option. Which feels appropriate for this project.
+This means the package can add between 0 and 10 spaces, or exactly 22. If any
+other number is needed, Jev has no correct option. Which feels appropriate for
+this project.
+
+### 22 spaces
+
+Spaces 0 to 10 are supported for everyone. 22 is supported for
+[@akwodkiewicz](https://github.com/f/jev-leftpad/issues/1), who needed exactly
+22 and asked nicely. 11 to 21 remain unsupported, in line with the project
+vision.
+
+```js
+await leftPad('jev', 25);
+// "                      jev" (probably)
+```
+
+Custom padding is available on request, one number per customer.
 
 There is one TypeSafe API request per call and retries are disabled. The request
 can fail, Jev can choose the wrong option, and it costs more than `padStart()`.

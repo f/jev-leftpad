@@ -74,8 +74,22 @@ describe('leftPad', () => {
       space_1: '1 space is needed',
       space_2: '2 spaces are needed',
     });
-    expect(Object.keys(request.questions.padding.criteria)).toHaveLength(11);
+    expect(Object.keys(request.questions.padding.criteria)).toHaveLength(12);
   });
+
+  it('supports 22 spaces for @akwodkiewicz', async () => {
+    answer('space_22');
+    await expect(leftPad('jev', 25)).resolves.toBe(`${' '.repeat(22)}jev`);
+  });
+
+  it.each([11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21])(
+    'still cannot pad %s spaces',
+    async (spaces) => {
+      await leftPad('jev', spaces + 3);
+      const { criteria } = mocks.systemOne.mock.calls[0][0].questions.padding;
+      expect(criteria).not.toHaveProperty(`space_${spaces}`);
+    },
+  );
 
   it.each([-1, 1.5, Number.NaN, Number.POSITIVE_INFINITY])(
     'rejects invalid target length %s before making a request',

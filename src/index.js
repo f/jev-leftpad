@@ -23,7 +23,8 @@ export async function leftPad(value, targetLength) {
           space_7: '7 spaces are needed',
           space_8: '8 spaces are needed',
           space_9: '9 spaces are needed',
-          space_10: '10 spaces are needed'
+          space_10: '10 spaces are needed',
+          space_22: '22 spaces are needed (for @akwodkiewicz)'
         },
       ),
     },
