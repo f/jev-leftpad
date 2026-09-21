@@ -7,6 +7,7 @@
   "files": [
     "src",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "main": "./src/index.js",
@@ -25,7 +26,8 @@
     "jev",
     "typesafe-ai",
     "system-one",
-    "probabilistic"
+    "probabilistic",
+    "calculus"
   ],
   "license": "MIT",
   "repository": {
