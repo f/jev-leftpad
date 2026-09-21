@@ -1,0 +1,48 @@
+{
+  "name": "jev-leftpad",
+  "version": "0.1.1",
+  "description": "Left-pad strings with TypeSafe AI's Jev. For reasons.",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "check": "npm test",
+    "prepublishOnly": "npm run check"
+  },
+  "keywords": [
+    "left-pad",
+    "leftpad",
+    "jev",
+    "typesafe-ai",
+    "system-one",
+    "probabilistic"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f/jev-leftpad.git"
+  },
+  "homepage": "https://github.com/f/jev-leftpad#readme",
+  "bugs": {
+    "url": "https://github.com/f/jev-leftpad/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "0.6.0"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.11"
+  }
+}
